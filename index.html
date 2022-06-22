@@ -162,13 +162,13 @@
 <p>然后兴高采烈地用cmake去“create the Visual Studio solution”，结果cmake告诉我</p>
 <p><code> could not find any instance of Visual Studio 2022</code></p>
 <p>在Visual Studio Installer中点了一下修复，似乎就把这个问题解决了</p>
-<p>一波已平一波又起，接下来cmake告诉我一些头文件找不到了![image-20220622173705265](D:\FBI warning\myhexo2\source_posts\在我的电脑上跑liquidfun的艰难历程\image-20220622173705265.png)</p>
+<p>一波已平一波又起，接下来cmake告诉我一些头文件找不到了<img src="/.io//.%5C%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B%5Cimage-20220622173705265.png" alt="image-20220622173705265"></p>
 <p>然后在VS Installer中卸载了Windows 10 SDK (10.0.19041.0),安装了Windows 10 SDK(10.0.20348.0)，这些头文件似乎出现在我电脑上了，这个问题也没有了</p>
 <p>又一个问题</p>
 <p><code> CMake Error at CMakeLists.txt:158 (set_target_properties):   set_target_properties Can not find target to add properties to:   Threads::Threads</code></p>
 <p>一番网上搜索无果后，我自己去修改了一下CmakeList.txt</p>
 <p>你不是找不到Threads::Treads 吗，就跳过它吧</p>
-<p>![image-20220622174056050](D:\FBI warning\myhexo2\source_posts\在我的电脑上跑liquidfun的艰难历程\image-20220622174056050.png)</p>
+<p><img src="/.io//.%5C%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B%5Cimage-20220622174056050.png" alt="image-20220622174056050"></p>
 <p>在加上了这里第二行到第四行代码后，cmake过了</p>
 </body></html>
     
@@ -401,7 +401,7 @@
                 PAGES: 'Seiten',
                 CATEGORIES: 'Kategorien',
                 TAGS: 'Tags',
-                UNTITLED: '(Sin título)',
+                UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
         };
