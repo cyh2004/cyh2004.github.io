@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          304 字
+          308 字
         
       </span>
     
@@ -277,15 +277,13 @@
 <span id="more"></span>
 
 <p>执行以下命令，问题立即解决：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> purge sougopinyin
-<span class="token function">sudo</span> <span class="token function">apt</span> purge fcitx
-<span class="token function">sudo</span> <span class="token function">apt</span> autoremove<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt purge sougopinyin<br>sudo apt purge fcitx<br>sudo apt autoremove<br></code></pre></td></tr></table></figure>
 
 <hr>
 <p>先以为是账号出了问题，于是删了再建，好几次也没解决<br>但是学到了新建账号应该使用adduser而不要用useradd<br>以及要将账号写入&#x2F;etc&#x2F;sudoers才能使用sudo命令</p>
 <hr>
 <p>后来以为是桌面系统出了问题，按网上的方法，尝试：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> remove gdm3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt remove gdm3<br></code></pre></td></tr></table></figure>
 
 <p>没用</p>
 <p>但是学到了Ubuntu登录界面和桌面是两个不同的程序</p>
