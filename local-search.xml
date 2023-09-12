@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>yarn全局包管理相关命令“</title>
+    <link href="/zh-cn/2023/09-11/yarn%E5%85%A8%E5%B1%80%E5%8C%85%E7%AE%A1%E7%90%86%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/"/>
+    <url>/zh-cn/2023/09-11/yarn%E5%85%A8%E5%B1%80%E5%8C%85%E7%AE%A1%E7%90%86%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<p>yarn安装全局包<br>yarn安装全局包的命令是yarn global add 【包名】，不是yarn add 【包名】 global，不要搞反了。</p><p>查看 yarn 全局包的可执行文件安装位置：yarn global bin</p><p>查看 yarn 全局包的源文件安装位置：yarn global dir</p><p>修改 yarn 全局包 bin 安装位置：yarn config set global-folder “你的磁盘路径”</p><p>修改环境变量：export PATH&#x3D;$PATH:【yarn 全局包 bin 安装位置】</p><p>改变 yarn 缓存位置：yarn config set cache-folder “你的磁盘路径”</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>node</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yarn</tag>
+      
+      <tag>cheatsheet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搜狗输入法导致ubuntu的问题</title>
+    <link href="/zh-cn/2022/08-08/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AF%BC%E8%87%B4ubuntu%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <url>/zh-cn/2022/08-08/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AF%BC%E8%87%B4ubuntu%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>下载了搜狗输入法和fcitx后，ubuntu登录时紫屏，无法进入桌面</p><span id="more"></span><p>执行以下命令，问题立即解决：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> purge sougopinyin<span class="token function">sudo</span> <span class="token function">apt</span> purge fcitx<span class="token function">sudo</span> <span class="token function">apt</span> autoremove<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><hr><p>先以为是账号出了问题，于是删了再建，好几次也没解决<br>但是学到了新建账号应该使用adduser而不要用useradd<br>以及要将账号写入&#x2F;etc&#x2F;sudoers才能使用sudo命令</p><hr><p>后来以为是桌面系统出了问题，按网上的方法，尝试：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> remove gdm3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>没用</p><p>但是学到了Ubuntu登录界面和桌面是两个不同的程序</p><p>登录界面一般是gdm3或lightdm，桌面一般是X或wayland</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>bugs</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用json库生成json文件时如何设置自动缩进</title>
+    <link href="/zh-cn/2022/07-23/%E4%BD%BF%E7%94%A8json%E5%BA%93%E7%94%9F%E6%88%90json%E6%96%87%E4%BB%B6%E6%97%B6%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E7%BC%A9%E8%BF%9B/"/>
+    <url>/zh-cn/2022/07-23/%E4%BD%BF%E7%94%A8json%E5%BA%93%E7%94%9F%E6%88%90json%E6%96%87%E4%BB%B6%E6%97%B6%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E7%BC%A9%E8%BF%9B/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>pip安装问题</title>
+    <link href="/zh-cn/2022/07-15/pip%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/"/>
+    <url>/zh-cn/2022/07-15/pip%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>开了代理会导致ValueError: check_hostname requires server_hostname，然后就安装不了库</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>让grep匹配正则表达式</title>
+    <link href="/zh-cn/2022/07-14/%E8%AE%A9grep%E5%8C%B9%E9%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <url>/zh-cn/2022/07-14/%E8%AE%A9grep%E5%8C%B9%E9%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>科服日志220706</title>
+    <link href="/zh-cn/2022/07-06/%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220706/"/>
+    <url>/zh-cn/2022/07-06/%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220706/</url>
+    
+    <content type="html"><![CDATA[<p><strong>crystaldiskmark</strong>可以查看硬盘读取速度</p><p>（注意第一行的百分比数值）</p><p>nvme接口的速度：</p><p><img src="/zh-cn/2022/07-06/%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220706/.%5C%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220706%5Cimage-20220706180756813.png" alt="image-20220706180756813"></p><p>sata接口的速度：</p><p><img src="/zh-cn/2022/07-06/%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220706/.%5C%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220706%5Cimage-20220706180858089.png" alt="image-20220706180858089"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>科服日志</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>科服日志220626</title>
+    <link href="/zh-cn/2022/06-26/%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220626/"/>
+    <url>/zh-cn/2022/06-26/%E7%A7%91%E6%9C%8D%E6%97%A5%E5%BF%97220626/</url>
+    
+    <content type="html"><![CDATA[<p>问题：蓝屏<br>终止代码：SYSTEM THREAD EXCEPTION NOT HANDLED<br>失效的操作：NETIO.SYS</p><p>解决方法：该同学最近装了个Image Pro，卸载之后问题就解决了，怀疑是软件与驱动冲突</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>科服日志</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在我的电脑上跑liquidfun的艰难历程</title>
+    <link href="/zh-cn/2022/06-22/%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/"/>
+    <url>/zh-cn/2022/06-22/%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<p>实际上还没有结束，才刚刚cmake configure完成，得到Box2D.sln</p><p>但还是想记录一下</p><p>把liquidfun装进电脑要几步？</p><p>三步</p><p><img src="/zh-cn/2022/06-22/%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/.%5C%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B%5Cimage-20220622172337709.png" alt="image-20220622172337709"></p><p>好耶，第一步完成</p><p>第二步</p><p>先去学校its上面下VS2012pro(中文版)，结果安装的时候报错</p><p><img src="/zh-cn/2022/06-22/%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/1655699866357.png" alt="image"></p><p>听科服队长的建议下了个visual c++2012没有解决，自己搜半天没有解决，最后反馈给了its，还没有回复</p><p>于是决定去官网下，下就下了最新的2022版，这回终于能用了，就是占空间有点大。</p><p>第三步</p><p>先是觉得自己很猛，下了个源代码版本的cmake，发现看不懂</p><p>果断下载有图形化安装界面的cmake，唉</p><p>然后兴高采烈地用cmake去“create the Visual Studio solution”，结果cmake告诉我</p><p><code> could not find any instance of Visual Studio 2022</code></p><p>在Visual Studio Installer中点了一下修复，似乎就把这个问题解决了</p><p>一波已平一波又起，接下来cmake告诉我一些头文件找不到了<img src="/zh-cn/2022/06-22/%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/image-20220622173705265.png" alt="image-20220622173705265"></p><p>然后在VS Installer中卸载了Windows 10 SDK (10.0.19041.0),安装了Windows 10 SDK(10.0.20348.0)，这些头文件似乎出现在我电脑上了，这个问题也没有了</p><p>又一个问题</p><p><code> CMake Error at CMakeLists.txt:158 (set_target_properties):   set_target_properties Can not find target to add properties to:   Threads::Threads</code></p><p>一番网上搜索无果后，我自己去修改了一下CmakeList.txt</p><p>你不是找不到Threads::Treads 吗，就跳过它吧</p><p><img src="/zh-cn/2022/06-22/%E5%9C%A8%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91%E4%B8%8A%E8%B7%91liquidfun%E7%9A%84%E8%89%B0%E9%9A%BE%E5%8E%86%E7%A8%8B/image-20220622174056050.png" alt="image-20220622174056050"></p><p>在加上了这里第二行到第四行代码后，cmake过了</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>frets</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
